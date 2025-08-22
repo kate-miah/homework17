@@ -71,3 +71,19 @@ arr11.slice(3);
 const arr12 = [1, 2, 3, 4, 5];
   arr12.splice(1, 0, 'w', 'trtr');
   arr12.splice(6, 1, 'vvv', 'a', 'hello');
+
+//  Таска з *: Написати функцію, яка приймає рядок і масив голосних літер, повертає кількість включень голосних у заданому рядку: function countVovels(str, vovelsArray), vovelsArray = [a, e, i, o, u, y]
+
+const vowelsArray = ['a', 'e', 'i', 'o', 'u', 'y'];
+function countVowels(str, vowelsArray) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (vowelsArray.includes(str[i])) {
+        count++;
+        }
+    }
+    return count;
+    }
+
+console.log(countVowels('hello to you', vowelsArray));
+console.log(countVowels('lorem ipsum dolor sit amet', vowelsArray));
