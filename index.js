@@ -7,7 +7,17 @@ for (let i = 0; i < array.length; i++) {
 
 // 2. Дан масив з цілими числами. За допомогою циклу вивести елементи масива, які є простими числами
 
+const array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11];
 
+function prime(number) {
+  if (number < 2) return false;
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+}
+
+console.log(array2.filter(prime));
 
 //3.  Дано два масива: [1, 2, 3] і [4, 5, 6]. Об'єднати їх разом 
 
